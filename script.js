@@ -51,12 +51,12 @@ function handleOperation(operation) {
       break;
   }
 
-  document.getElementById('result').innerText = `El resultado es: ${result}`;
-  document.getElementById('result').classList.remove('content_result__error');
+  document.getElementById('result01').innerText = `El resultado es: ${result}`;
+  document.getElementById('result01').classList.remove('content_result__error');
 }
 
 /**EXERCISE 02 */
-let value = '';
+let value = '0';
 let resultKelvin;
 let resultFahrenheit;
 
