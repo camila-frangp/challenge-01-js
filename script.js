@@ -104,3 +104,26 @@ function handleResult() {
     const resultElement = document.getElementById('result03');
     resultElement.textContent = `${quantityDays > 1 ? `${quantityDays} días` : `${quantityDays} día`} equivale a ${years > 1 ? `${years} años` : `${years} año`}, ${weeks > 1 ? `${weeks} semanas` : `${weeks} semana`} y ${days > 1 ? `${days} días` : `${days} día`}`;
 }
+
+/**EXERCISE 04 */
+function handleSum() {
+    const number01 = Number(document.getElementById('number01').value);
+    const number02 = Number(document.getElementById('number02').value);
+    const number03 = Number(document.getElementById('number03').value);
+    const number04 = Number(document.getElementById('number04').value);
+    const number05 = Number(document.getElementById('number05').value);
+
+    const sum = number01 + number02 + number03 + number04 + number05;
+    document.getElementById('resultSum').innerText = `La suma total de los números es: ${sum}`;
+}
+
+function handleAverage() {
+    const number01 = Number(document.getElementById('number01').value);
+    const number02 = Number(document.getElementById('number02').value);
+    const number03 = Number(document.getElementById('number03').value);
+    const number04 = Number(document.getElementById('number04').value);
+    const number05 = Number(document.getElementById('number05').value);
+
+    const average = (number01 + number02 + number03 + number04 + number05) / 5;
+    document.getElementById('resultAverage').innerText = `El promedio de los números es: ${average}`;
+}

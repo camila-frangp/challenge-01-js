@@ -23,8 +23,8 @@
               <button class="content-actions_button" onclick="handleOperation('module')">Modulo</button>
             </div>
             <div id="result01" class="content_result"></div>
-          </section>
-          <section class="content content__02">
+        </section>
+        <section class="content content__02">
             <h3 class="content_title">Ingrese los grados en Celsius</h3>
             <div class="content-actions">
                 <input class="content-actions_input" type="number" id="temperatureInput"/>
@@ -44,6 +44,22 @@
                 <button class="content-actions_button" onclick="handleResult()">Calcular</button>
             </div>
             <div class="content_result" id="result03"></div>
+        </section>
+        <section class="content content__03">
+            <h3 class="content_title">Ingrese la cantidad de días que desee.</h3>
+            <div class="content-actions">
+                <input class="content-actions_input" type="number" id="number01"/>
+                <input class="content-actions_input" type="number" id="number02"/>
+                <input class="content-actions_input" type="number" id="number03"/>
+                <input class="content-actions_input" type="number" id="number04"/>
+                <input class="content-actions_input" type="number" id="number05"/>
+            </div>
+            <div class="content-actions">
+                <button class="content-actions_button" onclick="handleSum()">Sumar</button>
+                <button class="content-actions_button" onclick="handleAverage()">Promediar</button>
+            </div>
+            <div class="content_result" id="resultSum">La suma total de los números es: 0</div>
+            <div class="content_result" id="resultAverage">El promedio de los números es: 0</div>
         </section>
     </main>
     <script src="script.js"></script>
