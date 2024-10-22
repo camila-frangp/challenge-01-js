@@ -1,3 +1,4 @@
+/**EXERCISE 01 */
 let result;
 let activeError = false;
 let textError = 'Error!!';
@@ -22,8 +23,8 @@ function handleError(option) {
 function handleOperation(operation) {
   activeError = false;
   if (handleError(operation)) {
-    document.getElementById('result').innerText = textError;
-    document.getElementById('result').classList.add('content_result__error');
+    document.getElementById('result01').innerText = textError;
+    document.getElementById('result01').classList.add('content_result__error');
     return;
   }
 
@@ -52,4 +53,54 @@ function handleOperation(operation) {
 
   document.getElementById('result').innerText = `El resultado es: ${result}`;
   document.getElementById('result').classList.remove('content_result__error');
+}
+
+/**EXERCISE 02 */
+let value = '';
+let resultKelvin;
+let resultFahrenheit;
+
+document.getElementById('temperatureInput').addEventListener('input', (e) => {
+    value = e.target.value;
+});
+
+function handleTemperature(temp) {
+    const celsius = parseInt(value);
+    if (temp === 'kelvin') {
+        resultFahrenheit = undefined;
+        resultKelvin = celsius + 273.15;
+    }
+
+    if (temp === 'fahrenheit') {
+        resultKelvin = undefined;
+        resultFahrenheit = (celsius * 9/5) + 32;
+    }
+
+    updateResult();
+}
+
+function updateResult() {
+    const resultElement = document.getElementById('result02');
+    if (resultKelvin !== undefined) {
+        resultElement.textContent = `${value}º Celsius equivalen a ${resultKelvin}º Kelvin`;
+    } else if (resultFahrenheit !== undefined) {
+        resultElement.textContent = `${value}º Celsius equivalen a ${resultFahrenheit}º Fahrenheit`;
+    } else {
+        resultElement.textContent = '';
+    }
+}
+
+/**EXERCISE 03 */
+function handleResult() {
+    const YEAR = 365;
+    const WEEK = 7;
+
+    const quantityDays = Number(document.getElementById('daysInput').value);
+    const years = Math.floor(quantityDays / YEAR);
+    const remainingAfterYears = quantityDays % YEAR;
+    const weeks = Math.floor(remainingAfterYears / WEEK);
+    const days = remainingAfterYears % WEEK;
+
+    const resultElement = document.getElementById('result03');
+    resultElement.textContent = `${quantityDays > 1 ? `${quantityDays} días` : `${quantityDays} día`} equivale a ${years > 1 ? `${years} años` : `${years} año`}, ${weeks > 1 ? `${weeks} semanas` : `${weeks} semana`} y ${days > 1 ? `${days} días` : `${days} día`}`;
 }
