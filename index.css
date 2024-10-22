@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.challenge{
+    padding: 48px;
+}
+
+.challenge_title{
+  text-align: center;
+  margin: 0 0 24px;
+  color: darkslategrey;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto 24px;
+    padding: 24px;
+    border: 2px dashed coral;
+    border-radius: 8px;
+    &:last-of-type{
+      margin: 0 auto;
+    }
+}
+
+.content:last-of-type{
+    margin: 0 auto;
+}
+
+.content_title{
+  padding: 0 0 16px;
+  color: grey;
+  font-size: 16px;
+}
+.content-actions{
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 0 16px;
+}
+
+.content-actions_input{
+  padding: 8px;
+  width: 100px;
+  border: 1px solid lightskyblue;
+  border-radius: 4px;
+  &:focus{
+    outline: 2px solid lightseagreen;
+  }
+}
+
+.content-actions_input:focus{
+  outline: 2px solid lightseagreen;
+}
+
+.content-actions_button{
+  padding: 8px;
+  width: 150px;
+  background: lightskyblue;
+  border: 1px solid skyblue;
+  border-radius: 4px;
+  cursor: pointer;
+  color: darkslategray;
+}
+
+.content-actions_button:hover{
+  background: lightseagreen;
+  color: white;
+}
+
+.content-actions_button:focus{
+  outline: 2px solid lightseagreen;
+}
+
+.content_result{
+  padding: 16px 0;
+  color: darkslategray;
+  font-size: 18px;
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  background: lightgreen;
+  border: 1px solid green;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.content_result:last-child{
+    margin: 12px auto 0;
+}
+
+.content_result.content_result__error{
+  background: lightcoral;
+  border: 1px solid red;
+}
+
+@media (max-width: 768px){
+  .challenge{
+    padding: 24px;
+  }
+  .content{
+    width: 100%;
+  }
+
+  .content_result{
+    width: 100%;
+  }
+}

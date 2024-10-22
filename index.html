@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge 01 JS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main class="challenge">
+        <h1 class='challenge_title'>Desafío 01</h1>
+        <section class="content content__01">
+            <h3 class="content_title">Ingrese los números para operar</h3>
+            <div class="content-actions">
+              <input class="content-actions_input" type="number" id="value01" />
+              <input class="content-actions_input" type="number" id="value02" />
+            </div>
+            <div class="content-actions">
+              <button class="content-actions_button" onclick="handleOperation('add')">Sumar</button>
+              <button class="content-actions_button" onclick="handleOperation('subtract')">Restar</button>
+              <button class="content-actions_button" onclick="handleOperation('divide')">Dividir</button>
+              <button class="content-actions_button" onclick="handleOperation('multiply')">Multiplicar</button>
+              <button class="content-actions_button" onclick="handleOperation('module')">Modulo</button>
+            </div>
+            <div id="result" class="content_result"></div>
+          </section>
+        <section class='content content__02'>
+            <h3 class='content_title'>Ingrese la cantidad de días que desee.</h3>
+            <div class='content-actions'>
+                <input class='content-actions_input' type='number' id="valueDays"/>
+            </div>
+            <div class='content-actions'>
+                <button class='content-actions_button' onClick="handleResult(quantityDays)">Calcular</button>
+            </div>
+            <div class='content_result'>{quantityDays > 1 ? `${quantityDays} días`: `${quantityDays} día` } equivale a {year > 1 ? `${year} años`: `${year} año` }, {week > 1 ? `${week} semanas`: `${week} semana` } y {days > 1 ? `${days} días`: `${days} día` }</div>
+        </section>
+        <section class='content content__02'>
+            <h3 class='content_title'>Ingrese la cantidad de días que desee.</h3>
+            <div class='content-actions'>
+                <input class='content-actions_input' type='number' id="number01"/>
+                <input class='content-actions_input' type='number' id="number02"/>
+                <input class='content-actions_input' type='number' id="number03"/>
+                <input class='content-actions_input' type='number' id="number04"/>
+                <input class='content-actions_input' type='number' id="number05"/>
+            </div>
+            <div class='content-actions'>
+                <button class='content-actions_button' onClick="handleSum(number01, number02, number03, number04, number05)">Sumar</button>
+                <button class='content-actions_button' onClick="handleAverage(number01, number02, number03, number04, number05)">Promediar</button>
+            </div>
+
+            <div class='content_result'>La suma total de los números es: {resultSum}</div>
+            <div class='content_result'>El promerio de los números es: {resultAverage}</div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
